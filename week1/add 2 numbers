@@ -1,0 +1,22 @@
+#include <stdio.h>
+int add(int a[], int n)
+{
+	int sum=0;
+	for(int i=0; i<n; i++)
+	{
+		return (sum + a[i]);
+	}
+}
+void main()
+{
+	int n, x[10], tot=0;
+	printf("number of terms to be added=");
+	scanf("%d", &n);
+	for(int i=0; i<n; i++)
+	{
+		printf("enter number");
+		scanf("%d", &x[i]);
+		tot=tot+add(x[i], n);
+	}
+	printf("total=\n", tot);
+}
