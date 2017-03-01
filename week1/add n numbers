@@ -1,0 +1,24 @@
+#include <stdio.h>
+int addn(int a[], int n)
+{
+	int sum=0;
+	for(int i=0; i<n; i++)
+	{
+		sum=sum+a[i];
+	}
+	return sum;
+}
+int main()
+{
+	int a[20], n, tot=0;
+	printf("Enter the number of numbers to be added\n");
+	scanf("%d", &n);
+	for(int g=0; g<n; g++)
+	{
+		printf("enter number");
+		scanf("%d", &a[g]);
+	}
+	tot=addn(a, n);
+	printf("Sum is= %d", tot);
+	return 0;
+}
