@@ -2,39 +2,39 @@
 #include <math.h>
 struct complex 
 {
-float real, img;
+     float real, img;
 };
 struct roots
 { 
-struct complex r1, r2;
+     struct complex r1, r2;
 };
 int findroots( float a, float b, float c, struct roots *r)
 {
-float d = (b*b) - (4*a*c);
-if (d== 0)
-{
-r->r1.real = r->r2.real = -b/(2*a);
-}
-else if (d>0)
-{
-r->r1.real = (-b + sqrt(d))/(2*a);
-r->r2.real = (-b - sqrt(d))/(2*a);
-r->r1.img = r->r2.img = 0;
-}
-else if (d<0)
-{
-r->r1.real = r->r2.real = -b/(2*a);
-r->r1.img = r->r2.img = sqrt(-d)/(2*a);
-}
-return 0;
+     float d = (b*b) - (4*a*c);
+     if (d== 0)
+     {
+        r->r1.real = r->r2.real = -b/(2*a);
+     }
+     else if (d>0)
+    {
+        r->r1.real = (-b + sqrt(d))/(2*a);
+        r->r2.real = (-b - sqrt(d))/(2*a);
+        r->r1.img = r->r2.img = 0;
+    }
+    else if (d<0)
+    {
+        r->r1.real = r->r2.real = -b/(2*a);
+        r->r1.img = r->r2.img = sqrt(-d)/(2*a);
+    }
+    return 0;
 }
 int main()
 {
-struct roots r;
-float a, b, c;
-printf("enter coeff of x^2, x and constant");
-scanf("%f%f%f", &a, &b, &c);
-findroots(a, b, c, &r);
-printf("the roots are %f + i%f and %f - i%f", r.r1.real, r.r1.img, r.r2.real, r.r2.img);
-return 1;
+     struct roots r;
+     float a, b, c;
+     printf("enter coeff of x^2, x and constant");
+     scanf("%f%f%f", &a, &b, &c);
+     findroots(a, b, c, &r);
+     printf("the roots are %f + i%f and %f - i%f", r.r1.real, r.r1.img, r.r2.real, r.r2.img);
+     return 1;
 }
