@@ -1,0 +1,48 @@
+#include <stdio.h>
+int readmat( int m, int n, int a[m][n])
+{
+	printf("enter matrix constants");
+	for( int i=0; i<m; i++)
+	{
+		for( int j=0; j<n; j++)
+		{
+			scanf("%d", &a[i][j]);
+		}
+	}
+	return 0;
+}
+int show( int m, int n, int a[m][n])
+{
+	for( int i=0; i<m; i++)
+	{
+		for( int j=0; j<n; j++)
+		{
+			printf("%d", a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+int add(int m, int n, int a[m][n], int b[m][n], int c[m][n])
+	{
+		for( int i=0; i<m; i++)
+			{
+			for( int j=0; j<n; j++)
+				{
+					c[i][j] = a[i][j] + b[i][j];
+				}
+			}
+		return 0;
+}
+int main()
+{
+	int m, n;
+	printf("enter rows and columns");
+	scanf("%d%d", &m, &n);
+	int a[m][n], b[m][n], c[m][n];
+	readmat( m, n, a );
+	readmat( m, n, b);
+	add( m, n, a, b, c);
+	show( m, n, c);
+	return 0;
+}
