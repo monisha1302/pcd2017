@@ -5,7 +5,7 @@ int leap(int yr)
 	{
 		return 0;
 	}
-	else if(yr % 100 != 0)
+	else if(yr % 100 == 0)
 	{
 		return -1;
 	}
