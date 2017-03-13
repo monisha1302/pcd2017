@@ -1,0 +1,23 @@
+#include <stdio.h>
+float findroot ( float x)
+{
+	float m= 0.0001, i;
+	for (i = 0; i<x; i = i + m)
+	{
+		if ((i*i) > x)
+		{
+			i = i-m;
+			break;
+		}
+	}
+	return i;
+}
+int main()
+{
+	float x, sqroot;
+	printf(" enter number to find root");
+	scanf("%f", &x);
+	sqroot = findroot(x);
+	printf("root of %f is %f", x, sqroot);
+	return 0;
+}
