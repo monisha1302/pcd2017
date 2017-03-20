@@ -1,0 +1,16 @@
+#include <stdio.h>
+int rotateright(int x, int n)
+{
+	n = n%(sizeof(int)*8);
+	int l = (sizeof(int)*8 - n);
+	return x>>n | x<<l;
+}
+	int main()
+{
+	int x, n, a;
+	printf("enter number, and number of times to rotate");
+	scanf("%x%n", &x, &n);
+	a=rotateright(x,n);
+	printf("the number is %d", a);
+	return 0;
+}
